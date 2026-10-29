@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mazasco Group — Sovereign Enterprise & Operating Conglomerate</title>
+    <meta name="description" content="Mazasco Group is a sovereign holding conglomerate operating across advanced computing, enterprise cloud infrastructure, and strategic industrial capital. Parent holding company of Mazvon.">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Mazasco Group — Sovereign Enterprise & Operating Conglomerate">
+    <meta property="og:description" content="Parent holding conglomerate operating across advanced computing, cloud operating systems, and strategic enterprise investments.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mazasco.com">
+    <meta property="og:image" content="https://mazasco.com/Mazasco_logo.png">
+
+    <!-- Favicon Anchor -->
+    <link rel="icon" type="image/png" href="Mazasco_logo.png">
+
+    <!-- Schema.org Knowledge Graph: Corporation, Verified Physical Node & Subsidiary Linking -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Corporation",
+      "name": "Mazasco Group",
+      "legalName": "Mazasco Group",
+      "url": "https://mazasco.com",
+      "logo": "https://mazasco.com/Mazasco_logo.png",
+      "description": "Sovereign holding conglomerate operating across advanced computing, autonomous business systems, and strategic enterprise investments.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2 Birnin Kebbi Road, Bodinga Road, Mabera",
+        "addressLocality": "Sifawa",
+        "addressRegion": "Sokoto State",
+        "postalCode": "852103",
+        "addressCountry": "NG"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Sagir Mansur Sifawa",
+        "jobTitle": "Founder, Chairman & Chief Executive Officer"
+      },
+      "subOrganization": [
+        {
+          "@type": "Corporation",
+          "name": "Mazvon",
+          "url": "https://mazvon.com",
+          "description": "Flagship technology venture engineering Mazvon OS: The Sovereign Business Operating System."
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/mazascogroup",
+        "https://x.com/MazascoGroup",
+        "https://facebook.com/mazascogroup",
+        "https://youtube.com/@mazascogroup"
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --maz-gold: #B89344;
+            --maz-gold-light: #D4AF65;
+            --maz-gold-dark: #8F6F26;
+            --maz-gold-bg: rgba(184, 147, 68, 0.08);
+            --maz-obsidian: #1E363D;
+            --maz-dark-bg: #111A1D;
+            --maz-teal: #136F7B;
+            --maz-text-main: #212529;
+            --maz-text-muted: #5A626A;
+            --maz-surface: #FFFFFF;
+            --maz-canvas: #F8F9FA;
+            --maz-border: #E5E7EB;
+            --maz-container: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--maz-canvas);
+            color: var(--maz-text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top Bar */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--maz-border);
+        }
+
+        .header-inner {
+            max-width: var(--maz-container);
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-lockup {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+        }
+
+        .brand-lockup img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-text-name {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: var(--maz-obsidian);
+            line-height: 1.1;
+        }
+
+        .brand-text-sub {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--maz-gold);
+            text-transform: uppercase;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: var(--maz-text-main);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+
+        .main-nav a:hover {
+            color: var(--maz-gold);
+        }
+
+        .nav-btn {
+            background-color: var(--maz-obsidian);
+            color: #FFFFFF !important;
+            padding: 8px 18px;
+            border-radius: 4px;
+            transition: background-color 0.2s ease !important;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--maz-gold-dark) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(180deg, #FFFFFF 0%, var(--maz-canvas) 100%);
+            border-bottom: 1px solid var(--maz-border);
+            padding: 100px 24px 80px;
+            text-align: center;
+        }
+
+        .hero-inner {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--maz-gold-bg);
+            color: var(--maz-gold-dark);
+            border: 1px solid rgba(184, 147, 68, 0.25);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            border-radius: 50px;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 {
+            font-size: 54px;
+            font-weight: 850;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+            color: var(--maz-obsidian);
+            margin-bottom: 24px;
+        }
+
+        .hero h1 span {
+            color: var(--maz-gold);
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.65;
+            color: var(--maz-text-muted);
+            margin-bottom: 40px;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold {
+            background-color: var(--maz-gold);
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 14px 30px;
+            border-radius: 4px;
+            transition: background 0.2s ease;
+        }
+
+        .btn-gold:hover {
+            background-color: var(--maz-gold-dark);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--maz-obsidian);
+            border: 1px solid var(--maz-obsidian);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 14px 30px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--maz-obsidian);
+            color: #FFFFFF;
+        }
+
+        /* Standard Section */
+        .section {
+            padding: 90px 24px;
+            max-width: var(--maz-container);
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 60px;
+        }
+
+        .section-tag {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--maz-gold);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .section-header h2 {
+            font-size: 38px;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            color: var(--maz-obsidian);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 17px;
+            color: var(--maz-text-muted);
+        }
+
+        /* Grid Architecture */
+        .sectors-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .sector-card {
+            background: var(--maz-surface);
+            border: 1px solid var(--maz-border);
+            border-radius: 8px;
+            padding: 36px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .sector-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--maz-gold);
+        }
+
+        .sector-card-num {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: var(--maz-gold);
+            margin-bottom: 18px;
+        }
+
+        .sector-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--maz-obsidian);
+            margin-bottom: 14px;
+        }
+
+        .sector-card p {
+            font-size: 15px;
+            color: var(--maz-text-muted);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .sector-card-status {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--maz-obsidian);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--maz-gold);
+        }
+
+        /* Active Subsidiary Showcase (Mazvon) */
+        .subsidiary-showcase {
+            background: linear-gradient(135deg, #111A1D 0%, #1A2B32 100%);
+            border-radius: 12px;
+            padding: 60px;
+            color: #FFFFFF;
+            margin: 40px auto;
+            max-width: var(--maz-container);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+            border: 1px solid rgba(184, 147, 68, 0.3);
+        }
+
+        .subsidiary-content {
+            max-width: 650px;
+        }
+
+        .subsidiary-badge {
+            display: inline-block;
+            background: rgba(19, 111, 123, 0.3);
+            border: 1px solid var(--maz-teal);
+            color: #26E8CE;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .subsidiary-showcase h3 {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
+            color: #FFFFFF;
+        }
+
+        .subsidiary-showcase p {
+            font-size: 17px;
+            line-height: 1.65;
+            color: #B4C2C6;
+            margin-bottom: 30px;
+        }
+
+        .btn-teal {
+            background-color: var(--maz-teal);
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 14px 28px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: background 0.2s ease;
+        }
+
+        .btn-teal:hover {
+            background-color: #0E5660;
+        }
+
+        /* Governance Section */
+        .governance-block {
+            background: var(--maz-surface);
+            border: 1px solid var(--maz-border);
+            border-radius: 8px;
+            padding: 50px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .governance-block h3 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--maz-obsidian);
+            margin-bottom: 16px;
+        }
+
+        .governance-block p {
+            font-size: 16px;
+            color: var(--maz-text-muted);
+            max-width: 720px;
+            margin: 0 auto 30px;
+        }
+
+        .governance-pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            text-align: left;
+            margin-top: 30px;
+            border-top: 1px solid var(--maz-border);
+            padding-top: 30px;
+        }
+
+        .pillar-item h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--maz-obsidian);
+            margin-bottom: 6px;
+        }
+
+        .pillar-item p {
+            font-size: 14px;
+            color: var(--maz-text-muted);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #111A1D;
+            color: #8C999E;
+            padding: 70px 24px 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-inner {
+            max-width: var(--maz-container);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 50px;
+        }
+
+        .footer-brand h4 {
+            font-size: 20px;
+            font-weight: 800;
+            color: #FFFFFF;
+            letter-spacing: 1px;
+            margin-bottom: 14px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.6;
+            max-width: 360px;
+        }
+
+        .footer-col h5 {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #8C999E;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .footer-col a:hover {
+            color: var(--maz-gold-light);
+        }
+
+        .footer-bottom {
+            max-width: var(--maz-container);
+            margin: 0 auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        .footer-bottom a {
+            color: var(--maz-gold-light);
+            text-decoration: none;
+        }
+
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 40px; }
+            .sectors-grid { grid-template-columns: 1fr; }
+            .subsidiary-showcase { flex-direction: column; padding: 40px 24px; text-align: center; }
+            .governance-pillars { grid-template-columns: 1fr; text-align: center; }
+            .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+            .main-nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="https://mazasco.com" class="brand-lockup">
+                <img src="Mazasco_logo.png" alt="Mazasco Group Seal">
+                <div class="brand-text">
+                    <span class="brand-text-name">MAZASCO</span>
+                    <span class="brand-text-sub">GROUP</span>
+                </div>
+            </a>
+            <nav class="main-nav">
+                <a href="#about">Overview</a>
+                <a href="#sectors">Operating Sectors</a>
+                <a href="#subsidiaries">Subsidiaries</a>
+                <a href="#governance">Governance</a>
+                <a href="#contact" class="nav-btn">Corporate Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Showcase -->
+    <section class="hero" id="about">
+        <div class="hero-inner">
+            <div class="hero-badge">Sovereign Enterprise & Holding Conglomerate</div>
+            <h1>Stewardship, Scale &amp; <span>Technological Autonomy</span>.</h1>
+            <p>
+                Mazasco Group is a diversified holding conglomerate deploying capital and building operational infrastructure. 
+                From sovereign enterprise cloud platforms to commercial logistics and foundational industry, we engineer 
+                enterprises designed for multi-generational permanence.
+            </p>
+            <div class="hero-cta-group">
+                <a href="#subsidiaries" class="btn-gold">Explore Operating Assets</a>
+                <a href="#sectors" class="btn-outline">Corporate Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Sectors Grid -->
+    <section class="section" id="sectors">
+        <div class="section-header">
+            <span class="section-tag">Operating Matrix</span>
+            <h2>Foundational Enterprise Verticals</h2>
+            <p>
+                Our strategic charter focuses on essential, compounding industries that power modern commerce, 
+                digital sovereignty, and physical infrastructure.
+            </p>
+        </div>
+
+        <div class="sectors-grid">
+            <!-- Sector 1 -->
+            <div class="sector-card">
+                <div>
+                    <div class="sector-card-num">SECTOR // 01</div>
+                    <h3>Enterprise Computing &amp; Cloud Systems</h3>
+                    <p>
+                        Architecting sovereign, multi-tenant Business Operating Systems, enterprise ERP engines, and autonomous transaction networks.
+                    </p>
+                </div>
+                <div class="sector-card-status">
+                    <span class="status-dot"></span> Active Core Operation
+                </div>
+            </div>
+
+            <!-- Sector 2 -->
+            <div class="sector-card">
+                <div>
+                    <div class="sector-card-num">SECTOR // 02</div>
+                    <h3>Commercial Technology &amp; Digital Trade</h3>
+                    <p>
+                        Developing omnichannel commerce engines, Point of Sale hardware-software ecosystems, and global transaction settlement infrastructure.
+                    </p>
+                </div>
+                <div class="sector-card-status">
+                    <span class="status-dot"></span> Active Commercialization
+                </div>
+            </div>
+
+            <!-- Sector 3 -->
+            <div class="sector-card">
+                <div>
+                    <div class="sector-card-num">SECTOR // 03</div>
+                    <h3>Strategic Capital &amp; Physical Infrastructure</h3>
+                    <p>
+                        Allocating capital across real-world commercial real estate, logistics distribution hubs, and foundational industrial ventures.
+                    </p>
+                </div>
+                <div class="sector-card-status">
+                    <span class="status-dot"></span> Strategic Development
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flagship Technology Subsidiary Endorsement -->
+    <section class="section" id="subsidiaries">
+        <div class="section-header">
+            <span class="section-tag">Flagship Venture</span>
+            <h2>Technology Subsidiary</h2>
+            <p>Directly managed under the sovereign operational stewardship of Mazasco Group.</p>
+        </div>
+
+        <div class="subsidiary-showcase">
+            <div class="subsidiary-content">
+                <div class="subsidiary-badge">Flagship Technology Venture</div>
+                <h3>Mazvon OS</h3>
+                <p>
+                    Mazvon is our dedicated enterprise software venture, engineering the world's most performant sovereign Business Operating System. 
+                    Natively unifying Cloud ERP, Multi-Channel E-Commerce, Point of Sale, and CRM into an autonomous computational engine.
+                </p>
+                <a href="https://mazvon.com" target="_blank" class="btn-teal">
+                    Explore Mazvon OS ↗
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Governance & Fiduciary Stewardship -->
+    <section class="section" id="governance">
+        <div class="governance-block">
+            <span class="section-tag">Institutional Integrity</span>
+            <h3>Governance &amp; Fiduciary Responsibility</h3>
+            <p>
+                Named to honor enduring foundational roots, Mazasco Group operates on principles of uncompromised moral integrity, 
+                calculated financial conservatism, and long-term capital preservation.
+            </p>
+            <div class="governance-pillars">
+                <div class="pillar-item">
+                    <h4>Bedrock Stability</h4>
+                    <p>Zero speculative over-leverage. Every operational asset is built on sovereign ownership and structural viability.</p>
+                </div>
+                <div class="pillar-item">
+                    <h4>Technological Autonomy</h4>
+                    <p>We eliminate vendor dependence by engineering proprietary software architecture and self-hosted infrastructure.</p>
+                </div>
+                <div class="pillar-item">
+                    <h4>Generational Horizon</h4>
+                    <p>Our companies are built to operate across decades, prioritizing compounding enterprise trust over transient market cycles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Footer -->
+    <footer class="site-footer" id="contact">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h4>MAZASCO GROUP</h4>
+                <p>
+                    A sovereign holding conglomerate powering enterprise operating systems, advanced computing, 
+                    and strategic physical infrastructure.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h5>Operating Assets</h5>
+                <ul>
+                    <li><a href="https://mazvon.com" target="_blank">Mazvon OS</a></li>
+                    <li><a href="#sectors">Enterprise Systems</a></li>
+                    <li><a href="#sectors">Digital Commerce</a></li>
+                    <li><a href="#governance">Governance</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Headquarters &amp; Inquiries</h5>
+                <p style="font-size: 14px; line-height: 1.6; margin-bottom: 12px; color: #8C999E;">
+                    2 Birnin Kebbi Road, Mabera,<br>
+                    Sifawa 852103, Sokoto State, Nigeria.
+                </p>
+                <p style="font-size: 14px;">
+                    <a href="mailto:mazascogroup@gmail.com" style="color: var(--maz-gold-light);">mazascogroup@gmail.com</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>&copy; 2026 Mazasco Group. All Rights Reserved.</div>
+            <div>Institutional Holding Umbrella of <a href="https://mazvon.com" target="_blank">Mazvon</a>.</div>
+        </div>
+    </footer>
+
+</body>
+</html>
