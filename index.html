@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mazasco Group — Sovereign Enterprise & Operating Conglomerate</title>
-    <meta name="description" content="Mazasco Group is a sovereign holding conglomerate operating across advanced computing, enterprise cloud infrastructure, and strategic industrial capital. Parent holding company of Mazvon.">
+    <meta name="description" content="Mazasco Group is a sovereign holding conglomerate operating across advanced computing, enterprise cloud infrastructure, and strategic commercial ventures. Parent holding company of Mazvon.">
     
     <!-- Open Graph Metadata -->
     <meta property="og:title" content="Mazasco Group — Sovereign Enterprise & Operating Conglomerate">
@@ -16,7 +16,7 @@
     <!-- Favicon Anchor -->
     <link rel="icon" type="image/png" href="Mazasco_logo.png">
 
-    <!-- Schema.org Knowledge Graph: Corporation, Verified Physical Node & Subsidiary Linking -->
+    <!-- Schema.org Knowledge Graph: Verified Corporation & Subsidiary Linking -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -66,11 +66,11 @@
             --maz-dark-bg: #111A1D;
             --maz-teal: #136F7B;
             --maz-text-main: #212529;
-            --maz-text-muted: #5A626A;
+            --maz-text-muted: #495057;
             --maz-surface: #FFFFFF;
             --maz-canvas: #F8F9FA;
             --maz-border: #E5E7EB;
-            --maz-container: 1200px;
+            --maz-container: 1140px;
         }
 
         * {
@@ -87,24 +87,24 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background-color: var(--maz-canvas);
             color: var(--maz-text-main);
-            line-height: 1.6;
+            line-height: 1.55;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Top Bar */
+        /* Header Navigation */
         .site-header {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(8px);
             border-bottom: 1px solid var(--maz-border);
         }
 
         .header-inner {
             max-width: var(--maz-container);
             margin: 0 auto;
-            padding: 16px 24px;
+            padding: 12px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -113,12 +113,12 @@
         .brand-lockup {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 12px;
             text-decoration: none;
         }
 
         .brand-lockup img {
-            height: 48px;
+            height: 42px;
             width: auto;
             object-fit: contain;
         }
@@ -129,37 +129,37 @@
         }
 
         .brand-text-name {
-            font-size: 20px;
+            font-size: 19px;
             font-weight: 800;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.2px;
             color: var(--maz-obsidian);
             line-height: 1.1;
         }
 
         .brand-text-sub {
-            font-size: 11px;
-            font-weight: 600;
+            font-size: 10px;
+            font-weight: 700;
             letter-spacing: 2px;
             color: var(--maz-gold);
             text-transform: uppercase;
         }
 
-        .main-nav {
+        /* Desktop Nav */
+        .desktop-nav {
             display: flex;
-            gap: 28px;
+            gap: 24px;
             align-items: center;
         }
 
-        .main-nav a {
+        .desktop-nav a {
             text-decoration: none;
             color: var(--maz-text-main);
             font-size: 14px;
             font-weight: 600;
-            letter-spacing: 0.5px;
             transition: color 0.2s ease;
         }
 
-        .main-nav a:hover {
+        .desktop-nav a:hover {
             color: var(--maz-gold);
         }
 
@@ -175,16 +175,82 @@
             background-color: var(--maz-gold-dark) !important;
         }
 
-        /* Hero Section */
+        /* Mobile Header Controls */
+        .mobile-actions {
+            display: none;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .mobile-contact-pill {
+            background-color: var(--maz-gold-bg);
+            color: var(--maz-gold-dark);
+            border: 1px solid rgba(184, 147, 68, 0.3);
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: 1px solid var(--maz-border);
+            border-radius: 6px;
+            padding: 6px 10px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .menu-toggle span {
+            width: 20px;
+            height: 2px;
+            background-color: var(--maz-obsidian);
+            border-radius: 2px;
+            transition: 0.2s;
+        }
+
+        /* Mobile Dropdown Menu */
+        .mobile-menu-drawer {
+            display: none;
+            background: #FFFFFF;
+            border-bottom: 1px solid var(--maz-border);
+            padding: 16px 20px;
+        }
+
+        .mobile-menu-drawer.open {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .mobile-menu-drawer a {
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--maz-text-main);
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .mobile-menu-drawer a:hover {
+            color: var(--maz-gold);
+        }
+
+        /* Hero Section (Measurable, Compact Spacing) */
         .hero {
             background: linear-gradient(180deg, #FFFFFF 0%, var(--maz-canvas) 100%);
             border-bottom: 1px solid var(--maz-border);
-            padding: 100px 24px 80px;
+            padding: 56px 20px 48px;
             text-align: center;
         }
 
         .hero-inner {
-            max-width: 860px;
+            max-width: 820px;
             margin: 0 auto;
         }
 
@@ -193,22 +259,22 @@
             background: var(--maz-gold-bg);
             color: var(--maz-gold-dark);
             border: 1px solid rgba(184, 147, 68, 0.25);
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            padding: 8px 18px;
+            padding: 6px 16px;
             border-radius: 50px;
-            margin-bottom: 28px;
+            margin-bottom: 18px;
         }
 
         .hero h1 {
-            font-size: 54px;
+            font-size: 46px;
             font-weight: 850;
             line-height: 1.15;
-            letter-spacing: -1.5px;
+            letter-spacing: -1.2px;
             color: var(--maz-obsidian);
-            margin-bottom: 24px;
+            margin-bottom: 18px;
         }
 
         .hero h1 span {
@@ -216,16 +282,19 @@
         }
 
         .hero p {
-            font-size: 20px;
-            line-height: 1.65;
+            font-size: 18px;
+            line-height: 1.6;
             color: var(--maz-text-muted);
-            margin-bottom: 40px;
+            margin-bottom: 30px;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-cta-group {
             display: flex;
             justify-content: center;
-            gap: 16px;
+            gap: 14px;
             flex-wrap: wrap;
         }
 
@@ -233,9 +302,9 @@
             background-color: var(--maz-gold);
             color: #FFFFFF;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
-            padding: 14px 30px;
+            padding: 12px 26px;
             border-radius: 4px;
             transition: background 0.2s ease;
         }
@@ -249,9 +318,9 @@
             color: var(--maz-obsidian);
             border: 1px solid var(--maz-obsidian);
             text-decoration: none;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
-            padding: 14px 30px;
+            padding: 12px 26px;
             border-radius: 4px;
             transition: all 0.2s ease;
         }
@@ -261,90 +330,90 @@
             color: #FFFFFF;
         }
 
-        /* Standard Section */
+        /* Standard Section (Balanced Rhythm) */
         .section {
-            padding: 90px 24px;
+            padding: 60px 20px;
             max-width: var(--maz-container);
             margin: 0 auto;
         }
 
         .section-header {
             text-align: center;
-            max-width: 720px;
-            margin: 0 auto 60px;
+            max-width: 680px;
+            margin: 0 auto 40px;
         }
 
         .section-tag {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--maz-gold);
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             display: block;
         }
 
         .section-header h2 {
-            font-size: 38px;
+            font-size: 32px;
             font-weight: 800;
-            letter-spacing: -0.8px;
+            letter-spacing: -0.6px;
             color: var(--maz-obsidian);
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         .section-header p {
-            font-size: 17px;
+            font-size: 16px;
             color: var(--maz-text-muted);
         }
 
-        /* Grid Architecture */
+        /* Sectors Grid */
         .sectors-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
+            gap: 24px;
         }
 
         .sector-card {
             background: var(--maz-surface);
             border: 1px solid var(--maz-border);
             border-radius: 8px;
-            padding: 36px 30px;
+            padding: 28px 24px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
             transition: transform 0.2s ease, border-color 0.2s ease;
         }
 
         .sector-card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-3px);
             border-color: var(--maz-gold);
         }
 
         .sector-card-num {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 800;
             letter-spacing: 1.5px;
             color: var(--maz-gold);
-            margin-bottom: 18px;
+            margin-bottom: 12px;
         }
 
         .sector-card h3 {
-            font-size: 22px;
+            font-size: 19px;
             font-weight: 700;
             color: var(--maz-obsidian);
-            margin-bottom: 14px;
+            margin-bottom: 10px;
         }
 
         .sector-card p {
-            font-size: 15px;
+            font-size: 14px;
             color: var(--maz-text-muted);
-            margin-bottom: 24px;
-            line-height: 1.6;
+            margin-bottom: 20px;
+            line-height: 1.55;
         }
 
         .sector-card-status {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -355,71 +424,71 @@
         }
 
         .status-dot {
-            width: 8px;
-            height: 8px;
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
             background-color: var(--maz-gold);
         }
 
-        /* Active Subsidiary Showcase (Mazvon) */
+        /* Subsidiary Showcase (Mazvon OS) */
         .subsidiary-showcase {
             background: linear-gradient(135deg, #111A1D 0%, #1A2B32 100%);
-            border-radius: 12px;
-            padding: 60px;
+            border-radius: 10px;
+            padding: 44px 36px;
             color: #FFFFFF;
-            margin: 40px auto;
+            margin: 20px auto;
             max-width: var(--maz-container);
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 48px;
+            gap: 36px;
             border: 1px solid rgba(184, 147, 68, 0.3);
         }
 
         .subsidiary-content {
-            max-width: 650px;
+            max-width: 620px;
         }
 
         .subsidiary-badge {
             display: inline-block;
-            background: rgba(19, 111, 123, 0.3);
+            background: rgba(19, 111, 123, 0.35);
             border: 1px solid var(--maz-teal);
             color: #26E8CE;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 4px;
-            margin-bottom: 20px;
+            margin-bottom: 14px;
         }
 
         .subsidiary-showcase h3 {
-            font-size: 36px;
+            font-size: 30px;
             font-weight: 800;
             letter-spacing: -0.5px;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             color: #FFFFFF;
         }
 
         .subsidiary-showcase p {
-            font-size: 17px;
-            line-height: 1.65;
+            font-size: 15px;
+            line-height: 1.6;
             color: #B4C2C6;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
 
         .btn-teal {
             background-color: var(--maz-teal);
             color: #FFFFFF;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
-            padding: 14px 28px;
+            padding: 12px 24px;
             border-radius: 4px;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             transition: background 0.2s ease;
         }
 
@@ -432,45 +501,45 @@
             background: var(--maz-surface);
             border: 1px solid var(--maz-border);
             border-radius: 8px;
-            padding: 50px 40px;
-            max-width: 900px;
+            padding: 40px 32px;
+            max-width: 860px;
             margin: 0 auto;
             text-align: center;
         }
 
         .governance-block h3 {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 800;
             color: var(--maz-obsidian);
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         .governance-block p {
-            font-size: 16px;
+            font-size: 15px;
             color: var(--maz-text-muted);
-            max-width: 720px;
-            margin: 0 auto 30px;
+            max-width: 680px;
+            margin: 0 auto 24px;
         }
 
         .governance-pillars {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            gap: 20px;
             text-align: left;
-            margin-top: 30px;
+            margin-top: 24px;
             border-top: 1px solid var(--maz-border);
-            padding-top: 30px;
+            padding-top: 24px;
         }
 
         .pillar-item h4 {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             color: var(--maz-obsidian);
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .pillar-item p {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--maz-text-muted);
             margin: 0;
             line-height: 1.5;
@@ -480,7 +549,7 @@
         .site-footer {
             background: #111A1D;
             color: #8C999E;
-            padding: 70px 24px 40px;
+            padding: 50px 20px 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
 
@@ -489,31 +558,31 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
-            gap: 60px;
-            margin-bottom: 50px;
+            gap: 40px;
+            margin-bottom: 36px;
         }
 
         .footer-brand h4 {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 800;
             color: #FFFFFF;
             letter-spacing: 1px;
-            margin-bottom: 14px;
+            margin-bottom: 10px;
         }
 
         .footer-brand p {
-            font-size: 14px;
+            font-size: 13px;
             line-height: 1.6;
-            max-width: 360px;
+            max-width: 340px;
         }
 
         .footer-col h5 {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
             color: #FFFFFF;
-            margin-bottom: 20px;
+            margin-bottom: 14px;
         }
 
         .footer-col ul {
@@ -521,13 +590,13 @@
         }
 
         .footer-col li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .footer-col a {
             color: #8C999E;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             transition: color 0.2s ease;
         }
 
@@ -538,12 +607,12 @@
         .footer-bottom {
             max-width: var(--maz-container);
             margin: 0 auto;
-            padding-top: 30px;
+            padding-top: 24px;
             border-top: 1px solid rgba(255, 255, 255, 0.06);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 13px;
+            font-size: 12px;
         }
 
         .footer-bottom a {
@@ -551,13 +620,23 @@
             text-decoration: none;
         }
 
-        @media (max-width: 900px) {
-            .hero h1 { font-size: 40px; }
-            .sectors-grid { grid-template-columns: 1fr; }
-            .subsidiary-showcase { flex-direction: column; padding: 40px 24px; text-align: center; }
-            .governance-pillars { grid-template-columns: 1fr; text-align: center; }
-            .footer-inner { grid-template-columns: 1fr; gap: 40px; }
-            .main-nav { display: none; }
+        /* Responsive Breakpoints */
+        @media (max-width: 860px) {
+            .desktop-nav { display: none; }
+            .mobile-actions { display: flex; }
+            .hero { padding: 40px 16px 36px; }
+            .hero h1 { font-size: 34px; letter-spacing: -0.8px; }
+            .hero p { font-size: 16px; margin-bottom: 24px; }
+            .section { padding: 44px 16px; }
+            .section-header { margin-bottom: 28px; }
+            .section-header h2 { font-size: 26px; }
+            .sectors-grid { grid-template-columns: 1fr; gap: 16px; }
+            .subsidiary-showcase { flex-direction: column; padding: 32px 20px; text-align: center; }
+            .subsidiary-showcase h3 { font-size: 24px; }
+            .governance-block { padding: 30px 18px; }
+            .governance-pillars { grid-template-columns: 1fr; gap: 16px; text-align: center; }
+            .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+            .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
         }
     </style>
 </head>
@@ -573,25 +652,44 @@
                     <span class="brand-text-sub">GROUP</span>
                 </div>
             </a>
-            <nav class="main-nav">
+            
+            <!-- Desktop Nav -->
+            <nav class="desktop-nav">
                 <a href="#about">Overview</a>
-                <a href="#sectors">Operating Sectors</a>
+                <a href="#sectors">Sectors</a>
                 <a href="#subsidiaries">Subsidiaries</a>
                 <a href="#governance">Governance</a>
-                <a href="#contact" class="nav-btn">Corporate Contact</a>
+                <a href="#contact" class="nav-btn">Inquiries</a>
             </nav>
+
+            <!-- Balanced Mobile Header Actions -->
+            <div class="mobile-actions">
+                <a href="#contact" class="mobile-contact-pill">Inquire</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Responsive Mobile Dropdown Drawer -->
+        <div class="mobile-menu-drawer" id="mobileDrawer">
+            <a href="#about" onclick="closeMobileMenu()">Overview</a>
+            <a href="#sectors" onclick="closeMobileMenu()">Operating Sectors</a>
+            <a href="#subsidiaries" onclick="closeMobileMenu()">Subsidiaries (Mazvon OS)</a>
+            <a href="#governance" onclick="closeMobileMenu()">Governance &amp; Integrity</a>
+            <a href="#contact" onclick="closeMobileMenu()">Headquarters Contact</a>
         </div>
     </header>
 
-    <!-- Hero Showcase -->
+    <!-- Hero Showcase (Compact, Balanced Spacing) -->
     <section class="hero" id="about">
         <div class="hero-inner">
-            <div class="hero-badge">Sovereign Enterprise & Holding Conglomerate</div>
+            <div class="hero-badge">Sovereign Enterprise &amp; Operating Conglomerate</div>
             <h1>Stewardship, Scale &amp; <span>Technological Autonomy</span>.</h1>
             <p>
-                Mazasco Group is a diversified holding conglomerate deploying capital and building operational infrastructure. 
-                From sovereign enterprise cloud platforms to commercial logistics and foundational industry, we engineer 
-                enterprises designed for multi-generational permanence.
+                Mazasco Group is a sovereign holding conglomerate. We build and invest in foundational industries—from enterprise cloud systems and business software to commercial logistics and physical infrastructure.
             </p>
             <div class="hero-cta-group">
                 <a href="#subsidiaries" class="btn-gold">Explore Operating Assets</a>
@@ -606,8 +704,7 @@
             <span class="section-tag">Operating Matrix</span>
             <h2>Foundational Enterprise Verticals</h2>
             <p>
-                Our strategic charter focuses on essential, compounding industries that power modern commerce, 
-                digital sovereignty, and physical infrastructure.
+                Our strategic charter focuses on essential industries that drive modern commerce and digital sovereignty.
             </p>
         </div>
 
@@ -618,7 +715,7 @@
                     <div class="sector-card-num">SECTOR // 01</div>
                     <h3>Enterprise Computing &amp; Cloud Systems</h3>
                     <p>
-                        Architecting sovereign, multi-tenant Business Operating Systems, enterprise ERP engines, and autonomous transaction networks.
+                        Architecting sovereign Business Operating Systems, enterprise ERP engines, and autonomous transaction software.
                     </p>
                 </div>
                 <div class="sector-card-status">
@@ -632,7 +729,7 @@
                     <div class="sector-card-num">SECTOR // 02</div>
                     <h3>Commercial Technology &amp; Digital Trade</h3>
                     <p>
-                        Developing omnichannel commerce engines, Point of Sale hardware-software ecosystems, and global transaction settlement infrastructure.
+                        Developing omnichannel commerce engines, Point of Sale hardware-software ecosystems, and merchant settlement systems.
                     </p>
                 </div>
                 <div class="sector-card-status">
@@ -646,7 +743,7 @@
                     <div class="sector-card-num">SECTOR // 03</div>
                     <h3>Strategic Capital &amp; Physical Infrastructure</h3>
                     <p>
-                        Allocating capital across real-world commercial real estate, logistics distribution hubs, and foundational industrial ventures.
+                        Allocating capital across commercial real estate, logistics distribution hubs, and foundational industrial ventures.
                     </p>
                 </div>
                 <div class="sector-card-status">
@@ -670,7 +767,7 @@
                 <h3>Mazvon OS</h3>
                 <p>
                     Mazvon is our dedicated enterprise software venture, engineering the world's most performant sovereign Business Operating System. 
-                    Natively unifying Cloud ERP, Multi-Channel E-Commerce, Point of Sale, and CRM into an autonomous computational engine.
+                    Natively unifying Cloud ERP, Multi-Channel E-Commerce, Point of Sale, and CRM into one autonomous computational engine.
                 </p>
                 <a href="https://mazvon.com" target="_blank" class="btn-teal">
                     Explore Mazvon OS ↗
@@ -685,8 +782,7 @@
             <span class="section-tag">Institutional Integrity</span>
             <h3>Governance &amp; Fiduciary Responsibility</h3>
             <p>
-                Named to honor enduring foundational roots, Mazasco Group operates on principles of uncompromised moral integrity, 
-                calculated financial conservatism, and long-term capital preservation.
+                Named to honor enduring foundational roots, Mazasco Group operates with complete financial independence, strict ethical standards, and long-term vision.
             </p>
             <div class="governance-pillars">
                 <div class="pillar-item">
@@ -726,11 +822,11 @@
             </div>
             <div class="footer-col">
                 <h5>Headquarters &amp; Inquiries</h5>
-                <p style="font-size: 14px; line-height: 1.6; margin-bottom: 12px; color: #8C999E;">
+                <p style="font-size: 13px; line-height: 1.6; margin-bottom: 10px; color: #8C999E;">
                     2 Birnin Kebbi Road, Mabera,<br>
                     Sifawa 852103, Sokoto State, Nigeria.
                 </p>
-                <p style="font-size: 14px;">
+                <p style="font-size: 13px;">
                     <a href="mailto:mazascogroup@gmail.com" style="color: var(--maz-gold-light);">mazascogroup@gmail.com</a>
                 </p>
             </div>
@@ -741,6 +837,20 @@
             <div>Institutional Holding Umbrella of <a href="https://mazvon.com" target="_blank">Mazvon</a>.</div>
         </div>
     </footer>
+
+    <!-- Zero-Dependency Mobile Menu Controller -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+
+        menuToggle.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('open');
+        });
+
+        function closeMobileMenu() {
+            mobileDrawer.classList.remove('open');
+        }
+    </script>
 
 </body>
 </html>
